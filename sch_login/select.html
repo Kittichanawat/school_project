@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Select Dropdown</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h3>เลือกครูที่ปรึกษา</h3>
+    <div class="dropdown">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        เลือกครู
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <div class="form-check">
+            <input class="form-check-input teacher-checkbox" type="checkbox" value="ครูสมชาย" id="teacher1">
+            <label class="form-check-label" for="teacher1">ครูสมชาย</label>
+          </div>
+        </li>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input teacher-checkbox" type="checkbox" value="ครูสมศรี" id="teacher2">
+            <label class="form-check-label" for="teacher2">ครูสมศรี</label>
+          </div>
+        </li>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input teacher-checkbox" type="checkbox" value="ครูสมปอง" id="teacher3">
+            <label class="form-check-label" for="teacher3">ครูสมปอง</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-success mt-3" id="submitTeachers">บันทึก</button>
+    <div id="selectedTeachers" class="mt-3"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("submitTeachers").addEventListener("click", () => {
+      const selectedTeachers = Array.from(document.querySelectorAll(".teacher-checkbox:checked")).map(
+        (checkbox) => checkbox.value
+      );
+      document.getElementById("selectedTeachers").innerHTML = `<strong>ครูที่เลือก:</strong> ${selectedTeachers.join(", ")}`;
+    });
+  </script>
+</body>
+</html>

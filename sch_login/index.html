@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ข้อมูลผู้ใช้</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container my-4">
+    <div class="row">
+      <!-- User Information Section -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white text-center">
+            <h5>ข้อมูลผู้ใช้</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Username:</strong> username_example</p>
+            <p><strong>ชื่อจริง:</strong> สมชาย</p>
+            <p><strong>นามสกุล:</strong> ใจดี</p>
+            <p><strong>เบอร์โทร:</strong> 081-234-5678</p>
+            <p><strong>ที่อยู่:</strong> 123 หมู่ 1 ตำบลสวนหลวง อำเภอเมือง จังหวัดสมุทรสาคร</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Roles Section -->
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-secondary text-white text-center">
+            <h5>สิทธิ์การใช้งาน</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">เลือกสิทธิ์ที่คุณต้องการเข้าใช้งาน:</p>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>ครู</span>
+                <a href="/teacher-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>นักเรียน</span>
+                <a href="/student-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>ผู้ปกครอง</span>
+                <a href="/parent-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>ผู้ดูแลระบบ</span>
+                <a href="/admin-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>แอดมิน</span>
+                <a href="/superadmin-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>ผู้บริหาร</span>
+                <a href="/executive-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>เจ้าหน้าที่ทะเบียน</span>
+                <a href="/registry-dashboard" class="btn btn-primary btn-sm">เข้าใช้งาน</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
